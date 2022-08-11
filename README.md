@@ -45,8 +45,8 @@ end
 for files in *.nii.gz; do
 	[ ! -d ${files%.nii.gz} ] && mkdir ${files%.nii.gz}
 	cd ${files%.nii.gz}
-	[ ! -d ${files%.nii.gz}_tensor.mif ] && dwi2tensor ../$files -fslgrad ../dwi.bvec ../dwi.bval ${files%.nii.gz}_tensor.mif
-	[ ! -d ${files%.nii.gz}_ev.nii.gz ] && tensor2metric  ${files%.nii.gz}_tensor.mif -adc ${files%.nii.gz}_adc.nii.gz -fa ${files%.nii.gz}_fa.nii.gz -ad ${files%.nii.gz}_ad.nii.gz -rd ${files%.nii.gz}_rd.nii.gz -vector ${files%.nii.gz}_ev.nii.gz
+	[ ! -f ${files%.nii.gz}_tensor.mif ] && dwi2tensor ../$files -fslgrad ../dwi.bvec ../dwi.bval ${files%.nii.gz}_tensor.mif
+	[ ! -f ${files%.nii.gz}_ev.nii.gz ] && tensor2metric  ${files%.nii.gz}_tensor.mif -adc ${files%.nii.gz}_adc.nii.gz -fa ${files%.nii.gz}_fa.nii.gz -ad ${files%.nii.gz}_ad.nii.gz -rd ${files%.nii.gz}_rd.nii.gz -vector ${files%.nii.gz}_ev.nii.gz
     cd -
 done
 ```

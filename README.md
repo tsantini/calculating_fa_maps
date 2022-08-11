@@ -33,6 +33,8 @@ for i=1:length(files)
 end
 ```
 
+### In the terminal
+
 4) copy the nifti files it generated to a separate folder, for exemple, I'm keeping them at `220724-fa_from_mat_files`
 
 5) run the bash script inside the `220724-fa_from_mat_file` called `compute_DTI.sh` using the tsantini/image_processing docker conteiner:

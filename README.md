@@ -1,4 +1,4 @@
-### On matlab
+### On matlab, converting mat file to nifti 
 
 1) Add `open_nii_TS` folder to your path
 https://www.dropbox.com/t/EG0et4tnHiIz5DBe
